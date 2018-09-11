@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2018-09-11T05:35:56.161Z",
+    "end": "2018-09-11T05:35:59.265Z",
+    "duration": 3104,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "edb0afab-bf8a-4fe7-8b4d-7be30c097c85",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "416e9b4c-c311-47a9-bb87-b24d8076eb37",
+        "title": "@firstTest@",
+        "fullFile": "/Users/anusaini/Work/Code/static/test/trivial.js",
+        "file": "/test/trivial.js",
+        "beforeHooks": [
+          {
+            "title": "\"before all\" hook",
+            "fullTitle": "@firstTest@ \"before all\" hook",
+            "timedOut": false,
+            "duration": 2545,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "return createNemo()\n  .then(bindNemo.bind(this));",
+            "err": {},
+            "isRoot": false,
+            "uuid": "23102b89-8586-4123-9d4a-b981046a0eee",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "afterHooks": [
+          {
+            "title": "\"after all\" hook",
+            "fullTitle": "@firstTest@ \"after all\" hook",
+            "timedOut": false,
+            "duration": 1,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "destroyNemo.call(this);",
+            "err": {},
+            "isRoot": false,
+            "uuid": "438aa476-a19b-49f4-9cee-ed1b139c4d20",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "tests": [
+          {
+            "title": "should load a website",
+            "fullTitle": "@firstTest@ should load a website",
+            "timedOut": false,
+            "duration": 550,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "await this.nemo.driver.get(this.nemo.data.baseUrl);",
+            "err": {},
+            "isRoot": false,
+            "uuid": "6f04a7ef-440f-4f4b-947c-a3a5698d134b",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "6f04a7ef-440f-4f4b-947c-a3a5698d134b"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 550,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 180000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 180000
+  },
+  "copyrightYear": 2018
+}

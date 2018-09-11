@@ -1,0 +1,22 @@
+{
+	"totals": {
+		"total": 1,
+		"pass": 1,
+		"fail": 0
+	},
+	"instances": [
+		{
+			"tags": {
+				"profile": "base",
+				"reportFile": "/09-11-2018/11-39-47/profile!base/nemo-report.html",
+				"uid": "2da7b1e3-d68e-49bd-aa82-b3c4cda9ce84"
+			},
+			"duration": null,
+			"summary": {
+				"total": 1,
+				"pass": 1,
+				"fail": 0
+			}
+		}
+	]
+}

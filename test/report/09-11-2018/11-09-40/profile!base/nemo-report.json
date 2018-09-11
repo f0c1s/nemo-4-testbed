@@ -1,0 +1,113 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2018-09-11T05:39:41.047Z",
+    "end": "2018-09-11T05:39:42.934Z",
+    "duration": 1887,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "danger",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "7aed20df-9a58-4217-b9fe-3a581f67e08b",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "129af0eb-be07-49ce-9011-35e69adc76b6",
+        "title": "#Select One",
+        "fullFile": "/Users/anusaini/Work/Code/static/test/select.js",
+        "file": "/test/select.js",
+        "beforeHooks": [
+          {
+            "title": "\"before all\" hook",
+            "fullTitle": "#Select One \"before all\" hook",
+            "timedOut": false,
+            "duration": 1506,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "return createNemo()\n  .then(bindNemo.bind(this));",
+            "err": {},
+            "isRoot": false,
+            "uuid": "df209a52-b0b5-4ae8-87c0-3dd68e4add1d",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "afterHooks": [
+          {
+            "title": "\"after all\" hook",
+            "fullTitle": "#Select One \"after all\" hook",
+            "timedOut": false,
+            "duration": 1,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "destroyNemo.call(this);",
+            "err": {},
+            "isRoot": false,
+            "uuid": "2bc2c5d9-019d-40a5-a97f-0a9ca8448151",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "tests": [
+          {
+            "title": "should load a website",
+            "fullTitle": "#Select One should load a website",
+            "timedOut": false,
+            "duration": 370,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "await this.nemo.driver.get(this.nemo.data.baseUrl + 'select.1.html');\nawait this.nemo.select.select_1.present();",
+            "err": {
+              "message": "TypeError: Cannot read property 'select_1' of undefined",
+              "estack": "TypeError: Cannot read property 'select_1' of undefined\n    at Context.<anonymous> (test/select.js:5:28)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)"
+            },
+            "isRoot": false,
+            "uuid": "40c4ebe9-9b63-4ed4-bf80-17f95463c624",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [],
+        "failures": [
+          "40c4ebe9-9b63-4ed4-bf80-17f95463c624"
+        ],
+        "pending": [],
+        "skipped": [],
+        "duration": 370,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 180000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 180000
+  },
+  "copyrightYear": 2018
+}

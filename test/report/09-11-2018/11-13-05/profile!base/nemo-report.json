@@ -1,0 +1,113 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2018-09-11T05:43:05.477Z",
+    "end": "2018-09-11T05:43:07.169Z",
+    "duration": 1692,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "danger",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "e7af3fa2-83ce-4c9c-97af-c4e75a81c014",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "a435fa64-c57f-4ce2-b319-76c3e9254176",
+        "title": "#Select One",
+        "fullFile": "/Users/anusaini/Work/Code/static/test/select.js",
+        "file": "/test/select.js",
+        "beforeHooks": [
+          {
+            "title": "\"before all\" hook",
+            "fullTitle": "#Select One \"before all\" hook",
+            "timedOut": false,
+            "duration": 1345,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "return createNemo()\n  .then(bindNemo.bind(this));",
+            "err": {},
+            "isRoot": false,
+            "uuid": "c01f70bb-f3e1-4ff7-a8e5-7497bda14d98",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "afterHooks": [
+          {
+            "title": "\"after all\" hook",
+            "fullTitle": "#Select One \"after all\" hook",
+            "timedOut": false,
+            "duration": 1,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "destroyNemo.call(this);",
+            "err": {},
+            "isRoot": false,
+            "uuid": "0b3004e1-ec76-41ba-9552-24d144fccc6e",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "tests": [
+          {
+            "title": "should load a website",
+            "fullTitle": "#Select One should load a website",
+            "timedOut": false,
+            "duration": 337,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "await this.nemo.driver.get(this.nemo.data.baseUrl + 'select.1.html');\nconsole.log(this.nemo.view);\nawait this.nemo.view.select1WaitVisible(40000);\nassert.ok(await this.nemo.view.select.select1Present());",
+            "err": {
+              "message": "TypeError: this.nemo.view.select1WaitVisible is not a function",
+              "estack": "TypeError: this.nemo.view.select1WaitVisible is not a function\n    at Context.<anonymous> (test/select.js:7:26)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)"
+            },
+            "isRoot": false,
+            "uuid": "9666a886-88e2-49bd-96cd-42ba9889ecbf",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [],
+        "failures": [
+          "9666a886-88e2-49bd-96cd-42ba9889ecbf"
+        ],
+        "pending": [],
+        "skipped": [],
+        "duration": 337,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 180000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 180000
+  },
+  "copyrightYear": 2018
+}

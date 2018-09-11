@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2018-09-11T06:09:10.896Z",
+    "end": "2018-09-11T06:09:12.541Z",
+    "duration": 1645,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "a92fb398-535e-445e-af20-0cbeda9bbeb2",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "5bb3777a-3a2c-46b8-a01e-c0fd7721e0f0",
+        "title": "#Select One",
+        "fullFile": "/Users/anusaini/Work/Code/static/test/select.js",
+        "file": "/test/select.js",
+        "beforeHooks": [
+          {
+            "title": "\"before all\" hook",
+            "fullTitle": "#Select One \"before all\" hook",
+            "timedOut": false,
+            "duration": 1250,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "return createNemo()\n  .then(bindNemo.bind(this));",
+            "err": {},
+            "isRoot": false,
+            "uuid": "20d61dcb-e4d3-47c9-9f80-b1615291dbe8",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "afterHooks": [
+          {
+            "title": "\"after all\" hook",
+            "fullTitle": "#Select One \"after all\" hook",
+            "timedOut": false,
+            "duration": 0,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "destroyNemo.call(this);",
+            "err": {},
+            "isRoot": false,
+            "uuid": "2e0546b1-699f-4fef-8c67-da80052faf76",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "tests": [
+          {
+            "title": "should load a website",
+            "fullTitle": "#Select One should load a website",
+            "timedOut": false,
+            "duration": 387,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "const nemo = this.nemo;\nawait nemo.driver.get(nemo.data.baseUrl + 'select.1.html');\nawait nemo.view.select.select1WaitVisible(40000);\nassert.ok(await nemo.view.select.select1Present());\nconsole.log(await nemo.view.select.select1().getText()); // All the option text\nconst valuesToSet = ['B', 'A', 'C'];\nvaluesToSet.forEach(async v => {\n  await nemo.view.select.select1WaitVisible(3000).sendKeys(v);\n  await takeAScreenShot(`${v}.select.1`, nemo);\n  const actual = await nemo.view.select.select1().getAttribute('value');\n  const expected = v;\n  assert.equal(actual, expected);\n});",
+            "err": {},
+            "isRoot": false,
+            "uuid": "351206a8-4710-4b08-8115-fc494b6349a1",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "351206a8-4710-4b08-8115-fc494b6349a1"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 387,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 180000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 180000
+  },
+  "copyrightYear": 2018
+}
