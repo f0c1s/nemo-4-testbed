@@ -1,0 +1,184 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2018-09-11T08:44:17.497Z",
+    "end": "2018-09-11T08:44:21.667Z",
+    "duration": 4170,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "danger",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "bfa8929d-05c5-4d55-be22-e80dbacb0458",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "f47d466e-7964-4649-9c81-321feeb4f759",
+        "title": "#Select One",
+        "fullFile": "/Users/anusaini/Work/Code/ft/nemo-v4-testbed/test/spec/select/select.1.js",
+        "file": "/test/spec/select/select.1.js",
+        "beforeHooks": [
+          {
+            "title": "\"before all\" hook",
+            "fullTitle": "#Select One \"before all\" hook",
+            "timedOut": false,
+            "duration": 1065,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "return createNemo()\n  .then(bindNemo.bind(this));",
+            "err": {},
+            "isRoot": false,
+            "uuid": "07f738f8-3164-4cc7-a925-ec8b093a9e87",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "afterHooks": [
+          {
+            "title": "\"after all\" hook",
+            "fullTitle": "#Select One \"after all\" hook",
+            "timedOut": false,
+            "duration": 0,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "destroyNemo.call(this);",
+            "err": {},
+            "isRoot": false,
+            "uuid": "8296b5bf-d611-4ff0-a506-e93359819d75",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "tests": [
+          {
+            "title": "should load a website",
+            "fullTitle": "#Select One should load a website",
+            "timedOut": false,
+            "duration": 1297,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "const nemo = this.nemo;\nawait nemo.driver.get(nemo.data.baseUrl + 'select.1.html');\nawait nemo.view.select.select1WaitVisible(40000);\nassert.ok(await nemo.view.select.select1Present());\nconsole.log(await nemo.view.select.select1().getText()); // All the option text\nlet actual;\nlet expected = 'B';\nawait nemo.view.select.select1WaitVisible(3000).sendKeys(expected);\nawait takeAScreenShot(`${expected}.select.1`, nemo);\nactual = await nemo.view.select.select1().getAttribute('value');\nassert.equal(actual, expected);\nexpected = 'A';\nawait nemo.view.select.select1WaitVisible(3000).sendKeys(expected);\nawait takeAScreenShot(`${expected}.select.1`, nemo);\nactual = await nemo.view.select.select1().getAttribute('value');\nassert.equal(actual, expected);\nexpected = 'D';\nawait nemo.view.select.select1WaitVisible(3000).sendKeys(expected);\nawait takeAScreenShot(`${expected}.select.1`, nemo);\nactual = await nemo.view.select.select1().getAttribute('value');\nassert.equal(actual, expected);",
+            "err": {
+              "message": "AssertionError [ERR_ASSERTION]: 'B' == 'A'",
+              "estack": "AssertionError [ERR_ASSERTION]: 'B' == 'A'\n    at Context.<anonymous> (test/spec/select/select.1.js:23:12)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)",
+              "diff": "- B\n+ A\n"
+            },
+            "isRoot": false,
+            "uuid": "10aae2b9-31a2-4597-a6a9-0585bb0150b1",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [],
+        "failures": [
+          "10aae2b9-31a2-4597-a6a9-0585bb0150b1"
+        ],
+        "pending": [],
+        "skipped": [],
+        "duration": 1297,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 180000
+      },
+      {
+        "uuid": "b971a0c1-9be3-4c47-a9e2-df935e91c753",
+        "title": "#Select One",
+        "fullFile": "/Users/anusaini/Work/Code/ft/nemo-v4-testbed/test/spec/select/select.2.js",
+        "file": "/test/spec/select/select.2.js",
+        "beforeHooks": [
+          {
+            "title": "\"before all\" hook",
+            "fullTitle": "#Select One \"before all\" hook",
+            "timedOut": false,
+            "duration": 940,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "return createNemo()\n  .then(bindNemo.bind(this));",
+            "err": {},
+            "isRoot": false,
+            "uuid": "c61362b5-af4c-46c4-a32d-49963f149ad0",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "afterHooks": [
+          {
+            "title": "\"after all\" hook",
+            "fullTitle": "#Select One \"after all\" hook",
+            "timedOut": false,
+            "duration": 0,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "destroyNemo.call(this);",
+            "err": {},
+            "isRoot": false,
+            "uuid": "77ab5044-360e-4f77-9c78-b3069a40f586",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "tests": [
+          {
+            "title": "should load a website",
+            "fullTitle": "#Select One should load a website",
+            "timedOut": false,
+            "duration": 857,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "const nemo = this.nemo;\nawait nemo.driver.get(nemo.data.baseUrl + 'select.1.html');\nawait nemo.view.select.select1WaitVisible(40000);\nassert.ok(await nemo.view.select.select1Present());\nconsole.log(await nemo.view.select.select1().getText()); // All the option text\nlet actual;\nlet expected = 'B';\nawait nemo.view.select.select1WaitVisible(3000).sendKeys(expected);\nawait takeAScreenShot(`${expected}.select.1`, nemo);\nactual = await nemo.view.select.select1().getAttribute('value');\nassert.equal(actual, expected);",
+            "err": {},
+            "isRoot": false,
+            "uuid": "cf48113b-e564-4b43-b939-25cd50606d86",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "cf48113b-e564-4b43-b939-25cd50606d86"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 857,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 180000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 180000
+  },
+  "copyrightYear": 2018
+}

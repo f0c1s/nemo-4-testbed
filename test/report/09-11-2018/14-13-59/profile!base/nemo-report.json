@@ -1,0 +1,114 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2018-09-11T08:43:59.919Z",
+    "end": "2018-09-11T08:44:02.440Z",
+    "duration": 2521,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "danger",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "1f6fa3f4-a63c-4d72-92a3-a10ac065a54e",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "0e4b9f13-b724-4ef6-aea6-14895eccb339",
+        "title": "#Select One",
+        "fullFile": "/Users/anusaini/Work/Code/ft/nemo-v4-testbed/test/spec/select/select.1.js",
+        "file": "/test/spec/select/select.1.js",
+        "beforeHooks": [
+          {
+            "title": "\"before all\" hook",
+            "fullTitle": "#Select One \"before all\" hook",
+            "timedOut": false,
+            "duration": 1157,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "return createNemo()\n  .then(bindNemo.bind(this));",
+            "err": {},
+            "isRoot": false,
+            "uuid": "8e45ca80-ee97-49ed-abd2-efb98531abab",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "afterHooks": [
+          {
+            "title": "\"after all\" hook",
+            "fullTitle": "#Select One \"after all\" hook",
+            "timedOut": false,
+            "duration": 0,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "destroyNemo.call(this);",
+            "err": {},
+            "isRoot": false,
+            "uuid": "f618b370-43f3-4e94-9c7e-e969149aaa0b",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "tests": [
+          {
+            "title": "should load a website",
+            "fullTitle": "#Select One should load a website",
+            "timedOut": false,
+            "duration": 1355,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "const nemo = this.nemo;\nawait nemo.driver.get(nemo.data.baseUrl + 'select.1.html');\nawait nemo.view.select.select1WaitVisible(40000);\nassert.ok(await nemo.view.select.select1Present());\nconsole.log(await nemo.view.select.select1().getText()); // All the option text\nlet actual;\nlet expected = 'B';\nawait nemo.view.select.select1WaitVisible(3000).sendKeys(expected);\nawait takeAScreenShot(`${expected}.select.1`, nemo);\nactual = await nemo.view.select.select1().getAttribute('value');\nassert.equal(actual, expected);\nexpected = 'A';\nawait nemo.view.select.select1WaitVisible(3000).sendKeys(expected);\nawait takeAScreenShot(`${expected}.select.1`, nemo);\nactual = await nemo.view.select.select1().getAttribute('value');\nassert.equal(actual, expected);\nexpected = 'D';\nawait nemo.view.select.select1WaitVisible(3000).sendKeys(expected);\nawait takeAScreenShot(`${expected}.select.1`, nemo);\nactual = await nemo.view.select.select1().getAttribute('value');\nassert.equal(actual, expected);",
+            "err": {
+              "message": "AssertionError [ERR_ASSERTION]: 'B' == 'A'",
+              "estack": "AssertionError [ERR_ASSERTION]: 'B' == 'A'\n    at Context.<anonymous> (test/spec/select/select.1.js:23:12)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)",
+              "diff": "- B\n+ A\n"
+            },
+            "isRoot": false,
+            "uuid": "47f04830-8a7d-414e-a944-023c1e3dc77f",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [],
+        "failures": [
+          "47f04830-8a7d-414e-a944-023c1e3dc77f"
+        ],
+        "pending": [],
+        "skipped": [],
+        "duration": 1355,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 180000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 180000
+  },
+  "copyrightYear": 2018
+}
