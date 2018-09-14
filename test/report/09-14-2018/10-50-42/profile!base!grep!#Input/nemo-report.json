@@ -1,0 +1,241 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2018-09-14T05:20:42.299Z",
+    "end": "2018-09-14T05:20:43.964Z",
+    "duration": 1665,
+    "testsRegistered": 5,
+    "passPercent": 20,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 3,
+    "hasSkipped": true,
+    "passPercentClass": "danger",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "4d905161-7610-4950-89c4-6966c403767a",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "2ec7da6c-6134-4742-9754-f80e73660365",
+        "title": "#Input #Text One",
+        "fullFile": "/Users/anusaini/Work/Code/ft/nemo-v4-testbed/test/spec/Input/text.1.js",
+        "file": "/test/spec/Input/text.1.js",
+        "beforeHooks": [
+          {
+            "title": "\"before all\" hook",
+            "fullTitle": "#Input #Text One \"before all\" hook",
+            "timedOut": false,
+            "duration": 1128,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "return createNemo()\n  .then(bindNemo.bind(this));",
+            "err": {},
+            "isRoot": false,
+            "uuid": "505da667-2463-4aa4-81b6-b45239b57a51",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "afterHooks": [
+          {
+            "title": "\"after all\" hook",
+            "fullTitle": "#Input #Text One \"after all\" hook",
+            "timedOut": false,
+            "duration": 0,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "destroyNemo.call(this);",
+            "err": {},
+            "isRoot": false,
+            "uuid": "53af0d32-fa99-4f82-95d0-628f7e773f97",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "tests": [
+          {
+            "title": "should load input.text.1.html and succeed in fetching the placeholder value",
+            "fullTitle": "#Input #Text One should load input.text.1.html and succeed in fetching the placeholder value",
+            "timedOut": false,
+            "duration": 358,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "const nemo = this.nemo;\nawait nemo.driver.get(nemo.data.baseUrl + 'input.text.1.html');\nawait nemo.view.input.textWaitVisible(40000);\nassert.ok(await nemo.view.input.textPresent());\nconst actual = await nemo.view.input.text().getAttribute('placeholder');\nconst expected = 'placeholder text';\nassert.equal(actual, expected);",
+            "err": {},
+            "isRoot": false,
+            "uuid": "e82e5c38-0cee-448d-ab2d-e5f4a384bd2d",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "should load input.text.1.html and succeed in updating the value",
+            "fullTitle": "#Input #Text One should load input.text.1.html and succeed in updating the value",
+            "timedOut": false,
+            "duration": 167,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "const nemo = this.nemo;\nawait nemo.driver.get(nemo.data.baseUrl + 'input.text.1.html');\nawait nemo.view.input.textWaitVisible(40000);\nassert.ok(await nemo.view.input.textPresent());\nawait nemo.view.input.text().sendKeys('New Value');\nconst actual = await nemo.view.input.text().getText();\nconst expected = 'New Value';\nassert.equal(actual, expected);",
+            "err": {
+              "message": "AssertionError [ERR_ASSERTION]: '' == 'New Value'",
+              "estack": "AssertionError [ERR_ASSERTION]: '' == 'New Value'\n    at Context.<anonymous> (test/spec/Input/text.1.js:21:12)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)",
+              "diff": "+ New Value\n"
+            },
+            "isRoot": false,
+            "uuid": "ae21cc59-4955-499a-9120-b1f5812c27ce",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "e82e5c38-0cee-448d-ab2d-e5f4a384bd2d"
+        ],
+        "failures": [
+          "ae21cc59-4955-499a-9120-b1f5812c27ce"
+        ],
+        "pending": [],
+        "skipped": [],
+        "duration": 525,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 180000
+      },
+      {
+        "uuid": "15ea1477-a66f-48c1-9bfc-721ce0ed4789",
+        "title": "#Select One Failure 1",
+        "fullFile": "/Users/anusaini/Work/Code/ft/nemo-v4-testbed/test/spec/select/select.1.js",
+        "file": "/test/spec/select/select.1.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "should load select.1.html and fail while changing select value second time",
+            "fullTitle": "#Select One Failure 1 should load select.1.html and fail while changing select value second time",
+            "timedOut": false,
+            "duration": 0,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "const nemo = this.nemo;\nawait nemo.driver.get(nemo.data.baseUrl + 'select.1.html');\nawait nemo.view.select.select1WaitVisible(40000);\nassert.ok(await nemo.view.select.select1Present());\n/*\nconsole.log(await nemo.view.select.select1().getText()); // All the option text\n    Please select one of the values.\n    A\n    B\n    C\n    D\n*/\nlet actual;\nlet expected = 'B';\nawait nemo.view.select.select1WaitVisible(3000).sendKeys(expected);\nawait takeAScreenShot(`${expected}.select.1`, nemo);\nactual = await nemo.view.select.select1().getAttribute('value');\nassert.equal(actual, expected);\nexpected = 'A';\nawait nemo.view.select.select1WaitVisible(3000).sendKeys(expected);\nawait takeAScreenShot(`${expected}.select.1`, nemo);\nactual = await nemo.view.select.select1().getAttribute('value');\nassert.equal(actual, expected);\nexpected = 'D';\nawait nemo.view.select.select1WaitVisible(3000).sendKeys(expected);\nawait takeAScreenShot(`${expected}.select.1`, nemo);\nactual = await nemo.view.select.select1().getAttribute('value');\nassert.equal(actual, expected);\n\n/* await nemo.view.select.select1WaitVisible(3000).clear();\n *\n * InvalidElementStateError: invalid element state: Element must be user-editable in order to clear it.\n  (Session info: chrome=69.0.3497.81)\n  (Driver info: chromedriver=2.40.565386 (45a059dc425e08165f9a10324bd1380cc13ca363),platform=Mac OS X 10.12.6 x86_64)\n  at Object.checkLegacyResponse (node_modules/selenium-webdriver/lib/error.js:546:15)\n  at parseHttpResponse (node_modules/selenium-webdriver/lib/http.js:509:13)\n  at doSend.then.response (node_modules/selenium-webdriver/lib/http.js:441:30)\n  at <anonymous>\n  at process._tickCallback (internal/process/next_tick.js:188:7)\n  From: Task: WebElement.clear()\n  at thenableWebDriverProxy.schedule (node_modules/selenium-webdriver/lib/webdriver.js:807:17)\n  at WebElementPromise.schedule_ (node_modules/selenium-webdriver/lib/webdriver.js:2010:25)\n  at WebElementPromise.clear (node_modules/selenium-webdriver/lib/webdriver.js:2351:17)\n  at Context.<anonymous> (test/select.js:14:53)\n  at <anonymous>\n  at process._tickCallback (internal/process/next_tick.js:188:7)\n  */",
+            "err": {},
+            "isRoot": false,
+            "uuid": "8b1a95c1-f8de-47c8-a042-e2f1cb5f2186",
+            "isHook": false,
+            "skipped": true
+          }
+        ],
+        "suites": [],
+        "passes": [],
+        "failures": [],
+        "pending": [],
+        "skipped": [
+          "8b1a95c1-f8de-47c8-a042-e2f1cb5f2186"
+        ],
+        "duration": null,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 180000
+      },
+      {
+        "uuid": "89695e13-e86e-4668-9ca2-32aa2b24b616",
+        "title": "#Select One success",
+        "fullFile": "/Users/anusaini/Work/Code/ft/nemo-v4-testbed/test/spec/select/select.1.js",
+        "file": "/test/spec/select/select.1.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "should load select.1.html and succeed in changing select's value",
+            "fullTitle": "#Select One success should load select.1.html and succeed in changing select's value",
+            "timedOut": false,
+            "duration": 0,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "const nemo = this.nemo;\nawait nemo.driver.get(nemo.data.baseUrl + 'select.1.html');\nawait nemo.view.select.select1WaitVisible(40000);\nassert.ok(await nemo.view.select.select1Present());\nlet actual;\nlet expected = 'B';\nawait nemo.view.select.select1WaitVisible(3000).sendKeys(expected);\nawait takeAScreenShot(`${expected}.select.1`, nemo);\nactual = await nemo.view.select.select1().getAttribute('value');\nassert.equal(actual, expected);",
+            "err": {},
+            "isRoot": false,
+            "uuid": "efa5eeaa-69b5-4bc7-bd7c-487d83f3ef61",
+            "isHook": false,
+            "skipped": true
+          }
+        ],
+        "suites": [],
+        "passes": [],
+        "failures": [],
+        "pending": [],
+        "skipped": [
+          "efa5eeaa-69b5-4bc7-bd7c-487d83f3ef61"
+        ],
+        "duration": null,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 180000
+      },
+      {
+        "uuid": "83afffbb-ece7-411b-ba28-b5055dc6ff28",
+        "title": "#Select Two",
+        "fullFile": "/Users/anusaini/Work/Code/ft/nemo-v4-testbed/test/spec/select/select.2.js",
+        "file": "/test/spec/select/select.2.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "should load select.2.html and succeed in changing the value",
+            "fullTitle": "#Select Two should load select.2.html and succeed in changing the value",
+            "timedOut": false,
+            "duration": 0,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "const nemo = this.nemo;\nawait nemo.driver.get(nemo.data.baseUrl + 'select.2.html');\nawait nemo.view.select.select1WaitVisible(40000);\nassert.ok(await nemo.view.select.select1Present());\nlet actual;\nlet expected = 'B';\nawait nemo.view.select.select1WaitVisible(3000).sendKeys(expected);\nawait takeAScreenShot(`${expected}.select.2`, nemo);\nactual = await nemo.view.select.select1().getAttribute('value');\nassert.equal(actual, expected);",
+            "err": {},
+            "isRoot": false,
+            "uuid": "c7a657dd-e497-4ad1-8ec8-637febc7a729",
+            "isHook": false,
+            "skipped": true
+          }
+        ],
+        "suites": [],
+        "passes": [],
+        "failures": [],
+        "pending": [],
+        "skipped": [
+          "c7a657dd-e497-4ad1-8ec8-637febc7a729"
+        ],
+        "duration": null,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 180000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 180000
+  },
+  "copyrightYear": 2018
+}

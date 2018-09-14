@@ -35,8 +35,6 @@ describe('#Select One Failure 1', function () {
     await takeAScreenShot(`${expected}.select.1`, nemo);
     actual = await nemo.view.select.select1().getAttribute('value');
     assert.equal(actual, expected);
-  });
-});
 
 /* await nemo.view.select.select1WaitVisible(3000).clear();
  *
@@ -56,7 +54,8 @@ describe('#Select One Failure 1', function () {
       at <anonymous>
       at process._tickCallback (internal/process/next_tick.js:188:7)
   */
-
+  });
+});
 
 describe('#Select One success', function () {
   it('should load select.1.html and succeed in changing select\'s value', async function () {
