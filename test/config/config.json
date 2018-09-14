@@ -9,10 +9,7 @@
         "screenshot": {
             "module": "nemo-screenshot",
             "arguments": [
-                "path:report",
-                [
-                    "click"
-                ]
+                "path:report"
             ]
         }
     },
