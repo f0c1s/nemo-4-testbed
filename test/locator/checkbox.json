@@ -1,0 +1,4 @@
+{
+    "one": "the-checkbox-one",
+    "checkbox": "input.checkbox[type=checkbox]"
+}

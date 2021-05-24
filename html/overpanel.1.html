@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box {
+            min-width: 800px;
+            min-height: 500px;
+            border: thin solid red;
+        }
+
+        .overpanel {
+            width: 50%;
+            height: 50%;
+            margin: auto;
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            border: thin solid green;
+        }
+
+        .close,
+        .open {
+            padding: 1em;
+            margin: 1em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <div class="overpanel">
+            <a class="close" onclick="console.log('nope')">X</a>
+            <button class="open" onclick="openAnotherOverpanel()">Open</button>
+        </div>
+    </div>
+
+    <script>
+        const BOX = '#box'
+        const OVERPANEL = '.overpanel'
+        const CLOSE = '.close'
+        const OPEN = '.open'
+
+        const box = document.querySelector(BOX)
+        const open = document.querySelector(OPEN)
+        const overpanel = document.querySelector(OVERPANEL)
+        overpanel.style.zIndex = 'auto'
+
+        var click = new MouseEvent('click', {
+            view: window,
+            bubbles: true,
+            cancelable: true
+        })
+        open.dispatchEvent(click)
+
+        function openAnotherOverpanel() {
+            const o = document.createElement('div')
+            o.classList = 'overpanel'
+            o.style.zIndex = '1'
+            o.style.border = 'thin solid blue'
+            const a = document.createElement('a')
+            a.classList = 'close'
+            a.innerText = 'X'
+            a.onclick = function () {
+                console.log('what?');
+            }
+            const b = document.createElement('button')
+            b.classList = 'open'
+            b.innerText = 'Open'
+            o.appendChild(a)
+            o.appendChild(b)
+            box.appendChild(o)
+            console.log('created another overpanel')
+        }
+
+    </script>
+</body>
+
+</html>

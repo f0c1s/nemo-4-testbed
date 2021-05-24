@@ -1,0 +1,37 @@
+{
+    "plugins": {
+        "view": {
+            "module": "nemo-view",
+            "arguments": [
+                "path:locator"
+            ]
+        },
+        "screenshot": {
+            "module": "nemo-screenshot",
+            "arguments": [
+                "path:report"
+            ]
+        }
+    },
+    "output": {
+        "reports": "path:report"
+    },
+    "profiles": {
+        "base": {
+            "tests": "path:./spec/**/*.js",
+            "driver": {
+                "browser": "chrome"
+            },
+            "data": {
+                "baseUrl": "localhost:8080/"
+            },
+            "mocha": {
+                "timeout": 180000,
+                "reporter": "mochawesome",
+                "reporterOptions": {
+                    "quiet": true
+                }
+            }
+        }
+    }
+}

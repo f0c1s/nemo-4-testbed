@@ -1,0 +1,6 @@
+{
+    "unorderedList": "#simple ul",
+    "unorderedListItems": "#simple ul li",
+    "complexUnorderedList": "#complex ul",
+    "complexUnorderedListItems": "#complex ul li"
+}
